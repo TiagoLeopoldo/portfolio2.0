@@ -6,7 +6,7 @@ import "@/App.css";
 
 const Greeting = () => {
   const [portfolio, setPortfolio] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenForm, setIsOpenForm] = useState(false);
 
   // Texto que será exibido com efeito de digitação
   const [texto, setTexto] = useState("");
@@ -70,10 +70,10 @@ const Greeting = () => {
             <img src={Wtsp} alt="" className="w-[1.3rem]" />
           </a>
 
-          <ModalForm isOpen={isOpen} setIsOpen={setIsOpen} />
+          <ModalForm isOpenForm={isOpenForm} setIsOpenForm={setIsOpenForm} />
 
           <button
-            onClick={() => setIsOpen(true)}
+            onClick={() => setIsOpenForm(true)}
             className="hidden lg:flex items-center justify-center max-w-full h-[2.3125rem] border border-solid border-[#1B98E0] rounded-md shadow-md text-center text-[0.9375rem] font-medium font-bold p-[0.5rem_1rem_0.5rem_1rem] opacity-70 mt-[0.625rem] transition-all duration-300 hover:shadow-lg active:scale-[0.8] gap-x-[0.5rem] whitespace-nowrap"
           >
             Mande uma mensagem

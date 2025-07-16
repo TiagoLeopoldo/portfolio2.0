@@ -27,7 +27,7 @@ Obrigado por visitar meu portfólio.
       if (aboutRef.current < textAboutMe.length) {
         setAbout((prev) => prev + textAboutMe.charAt(aboutRef.current));
         aboutRef.current++;
-        timeoutRef.current = setTimeout(writeAbout, 25);
+        timeoutRef.current = setTimeout(writeAbout, 15);
       }
     };
 
