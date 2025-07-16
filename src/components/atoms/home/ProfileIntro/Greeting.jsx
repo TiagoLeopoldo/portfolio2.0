@@ -11,7 +11,7 @@ const Greeting = () => {
   // Texto que será exibido com efeito de digitação
   const [texto, setTexto] = useState("");
   const textoCompleto =
-    "Transformando códigos em experiências globais e acessíveis,\nbuscando novos desafios para escalar soluções inovadoras.";
+    "Transformando códigos em experiências acessíveis,\n buscando novos desafios para escalar soluções inovadoras.";
   const indexRef = useRef(0); // guarda o índice atual fora do ciclo de renderização
   const timeoutRef = useRef(null); // guarda a referência do setTimeout
 
@@ -35,7 +35,7 @@ const Greeting = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-center text-[#ABB2BF] text-[32px] mt-[8rem] lg:mt-[5.125rem] pr-[1rem] pb-[1.5rem] pl-[1rem] gap-[1.5625rem] lg:items-start">
+    <div className="w-full flex flex-col items-center text-[#ABB2BF] text-[32px] mt-[3rem] lg:mt-[5.125rem] pr-[1rem] pb-[1.5rem] pl-[1rem] gap-[1.5625rem] lg:items-start">
       <div className="items-center justify-between m-auto">
         <h1 className="text-[#ABB2BF] text-[2rem] font-semibold">
           Olá,

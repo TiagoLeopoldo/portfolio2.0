@@ -7,7 +7,10 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  base: "/portfolio2.0/",
+  base: "./",
+  server: {
+    host: true
+  },
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

@@ -15,7 +15,7 @@ const Avatar = () => {
 
   return (
     // Container principal responsivo - muda layout em breakpoint lg (1024px)
-    <div className="flex flex-col w-[316px] h-[260.08px] mt-5 lg:mt-0 mr-[22px] mb-[47px] ml-[22px] relative lg:h-[393px] lg:w-[469px] lg:items-center lg:mr-[100px]">
+    <div className="flex flex-col w-[306px] h-[250.08px] mt-5 lg:mt-0 mr-[22px] mb-[47px] ml-[22px] relative lg:h-[393px] lg:w-[469px] lg:items-center lg:mr-[100px]">
       {/* Container interno para os elementos de imagem */}
       <div className="relative lg:w-[469px]">
         {/* Logo */}
@@ -51,7 +51,7 @@ const Avatar = () => {
       </div>
 
       {/* Container inferior com texto */}
-      <div className="w-full h-[58px] p-[8px] border border-[#ABB2BF] flex items-center justify-center lg:w-[390px] lg:h-[37px]">
+      <div className="hidden w-full h-[58px] p-[8px] border border-[#ABB2BF] lg:flex items-center justify-center lg:w-[390px] lg:h-[37px]">
         <ul className="p-0 flex items-start">
           <li className="relative flex items-center pl-[29px] before:content-[''] before:absolute before:left-0 before:top-[50%] before:translate-y-[-50%] before:w-[16px] before:h-[16px] before:bg-[#1B98E0] font-medium text-[10px] text-[#ABB2BF]">
             <p className="font-semibold text-white">

@@ -4,6 +4,7 @@ import closeButton from "@assets/profile/header/close.svg";
 import Github from "@assets/profile/header/Github.svg";
 import Linkedin from "@assets/profile/header/Linkedin.svg";
 import Email from "@assets/profile/header/Email.svg";
+import { Link } from "react-router-dom";
 
 const MobileMenuButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ const MobileMenuButton = () => {
       </button>
 
       <nav
-        className={`absolute right-0 top-[48px] w-[300px] max-h-[592px] bg-[#282C33] p-4 transition-all duration-500 ease-in-out ${
+        className={`absolute right-0 top-[45px] w-[300px] max-h-[592px] bg-[#282C33] rounded p-4 transition-all duration-500 ease-in-out ${
           isOpen
             ? "block opacity-100 translate-x-0"
             : "opacity-0 translate-x-[100%]"
@@ -28,9 +29,9 @@ const MobileMenuButton = () => {
         <ul className="flex flex-col items-start w-[300px] max-h-[338px] overflow-hidden">
           <li className="px-4 hover:font-medium">
             <span className="text-[#1B98E0] text-[32px]">#</span>
-            <a href="" className="text-[#ABB2BF] text-[32px]">
+            <Link to="/" className="text-[#ABB2BF] text-[32px]">
               inicio
-            </a>
+            </Link>
           </li>
           <li className="px-4">
             <span className="text-[#1B98E0] text-[32px]">#</span>
@@ -40,9 +41,9 @@ const MobileMenuButton = () => {
           </li>
           <li className="px-4 hover:font-medium">
             <span className="text-[#1B98E0] text-[32px]">#</span>
-            <a href="" className="text-[#ABB2BF] text-[32px]">
+            <Link to="/aboutme" className="text-[#ABB2BF] text-[32px]">
               sobre mim
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="flex justify-center items-center w-auto max-h-[338px] mt-[107px] mb-[36px] overflow-hidden">

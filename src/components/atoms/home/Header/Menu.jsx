@@ -1,6 +1,7 @@
 import "@/App.css";
 import { useState } from "react";
 import AboutMe from "../ProfileIntro/AboutMe.jsx";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,9 +10,9 @@ const Menu = () => {
       <ul className="hidden lg:flex flex-row max-w-[1024px] h-[61px] items-center justify-between pt-[32px] pb-[8px] m-0 mr-[66px]">
         <li className="px-4 hover:font-bold">
           <span className="text-[#1B98E0]">#</span>
-          <a href="" className="text-[#ABB2BF] text-[16px]">
+          <Link to="/" className="text-[#ABB2BF] text-[16px]">
             inicio
-          </a>
+          </Link>
         </li>
         <li className="px-4 hover:font-bold">
           <span className="text-[#1B98E0]">#</span>
@@ -23,7 +24,7 @@ const Menu = () => {
           <span className="text-[#1B98E0]">#</span>
 
           <span className="text-[#ABB2BF] text-[16px]">
-            sobre-mim
+            sobre mim
           </span>
         </li>
       </ul>
