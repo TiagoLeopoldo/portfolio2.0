@@ -16,9 +16,9 @@ const Menu = () => {
         </li>
         <li className="px-4 hover:font-bold">
           <span className="text-[#1B98E0]">#</span>
-          <a href="" className="text-[#ABB2BF] text-[16px]">
+          <Link to="/projects&experiences" className="text-[#ABB2BF] text-[16px]">
             projetos & experiências
-          </a>
+          </Link>
         </li>
         <li className="px-4 hover:font-bold" onClick={() => setIsOpen(true)}>
           <span className="text-[#1B98E0]">#</span>

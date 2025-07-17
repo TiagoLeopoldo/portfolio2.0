@@ -35,9 +35,9 @@ const MobileMenuButton = () => {
           </li>
           <li className="px-4">
             <span className="text-[#1B98E0] text-[32px]">#</span>
-            <a href="" className="text-[#ABB2BF] text-[32px]">
+            <Link to="/projects&experiences" className="text-[#ABB2BF] text-[32px]">
               projetos & experiências
-            </a>
+            </Link>
           </li>
           <li className="px-4 hover:font-medium">
             <span className="text-[#1B98E0] text-[32px]">#</span>
