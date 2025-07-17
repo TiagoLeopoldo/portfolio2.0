@@ -20,13 +20,17 @@ const Menu = () => {
             projetos & experiências
           </Link>
         </li>
-        <li className="px-4 hover:font-bold" onClick={() => setIsOpen(true)}>
-          <span className="text-[#1B98E0]">#</span>
+        <li className="px-4 hover:font-bold">
+  <span className="text-[#1B98E0]">#</span>
+  <button
+    onClick={() => setIsOpen(true)}
+    className="text-[#ABB2BF] text-[16px] cursor-pointer bg-transparent border-none p-0"
+  >
+    sobre mim
+  </button>
+</li>
 
-          <span className="text-[#ABB2BF] text-[16px]">
-            sobre mim
-          </span>
-        </li>
+
       </ul>
       <AboutMe isOpen={isOpen} setIsOpen={setIsOpen} />
     </>

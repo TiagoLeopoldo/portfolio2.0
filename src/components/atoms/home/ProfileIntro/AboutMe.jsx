@@ -60,7 +60,7 @@ Obrigado por visitar meu portfólio.
             <h1 className="text-[#ABB2BF] text-[2rem] font-semibold">
               Sobre mim
             </h1>
-            <span className="whitespace-pre-line">{about}</span>
+            <span className="whitespace-pre-line text-[#ABB2BF]">{about}</span>
           </div>
         </section>
       </div>
