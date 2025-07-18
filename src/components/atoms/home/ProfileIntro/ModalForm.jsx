@@ -34,7 +34,7 @@ const ModalForm = ({ isOpenForm, setIsOpenForm }) => {
         "QNl-kiiLAxVmzJNR-"
       )
       .then(() => {
-        setMensagemEnviada(true); // ✅ ativa a mensagem
+        setMensagemEnviada(true);
         setFormData({ email: "", subject: "", message: "" });
 
         setTimeout(() => {
@@ -50,7 +50,14 @@ const ModalForm = ({ isOpenForm, setIsOpenForm }) => {
   if (!isOpenForm) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-transparent animate-fadeInModal">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-transparent animate-fadeInModal"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) {
+          setIsOpenForm(false);
+        }
+      }}
+    >
       <div className="bg-[#282C33] border border-solid border-[#1B98E0] rounded-md shadow-md rounded-lg shadow-lg p-6 w-[50%] h-[70%] relative overflow-hidden">
         <button
           onClick={() => setIsOpenForm(false)}
@@ -90,17 +97,17 @@ const ModalForm = ({ isOpenForm, setIsOpenForm }) => {
             required
           />
           <div className="flex gap-5">
-          <button
-            type="submit"
-            className="lg:flex items-center justify-center w-[9.25rem] h-[2.3125rem] border border-solid border-[#1B98E0] rounded-md shadow-md text-center text-[0.9375rem] font-medium font-bold p-[0.5rem_1rem_0.5rem_1rem] opacity-70 mt-[0.625rem] transition-all duration-300 hover:shadow-lg active:scale-[0.8]"
-          >
-            Enviar
-          </button>
-          {mensagemEnviada && (
-            <p className="text-[#1B98E0] font-bold text-sm bg-[#1b98e015] px-4 py-2 rounded-md shadow-sm">
-              ✔️ Mensagem enviada
-            </p>
-          )}
+            <button
+              type="submit"
+              className="lg:flex items-center justify-center w-[9.25rem] h-[2.3125rem] border border-solid border-[#1B98E0] rounded-md shadow-md text-center text-[0.9375rem] font-medium font-bold p-[0.5rem_1rem_0.5rem_1rem] opacity-70 mt-[0.625rem] transition-all duration-300 hover:shadow-lg active:scale-[0.8]"
+            >
+              Enviar
+            </button>
+            {mensagemEnviada && (
+              <p className="text-[#1B98E0] font-bold text-sm bg-[#1b98e015] px-4 py-2 rounded-md shadow-sm">
+                ✔️ Mensagem enviada
+              </p>
+            )}
           </div>
         </form>
       </div>

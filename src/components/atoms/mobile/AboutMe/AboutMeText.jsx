@@ -6,7 +6,7 @@ const AboutMeText = () => {
             Sobre mim
           </h1>
           <p className="text-[01rem] text-justify indent-3">
-            Olá! Sou Tiago, graduando em Análise e Desenvolvimento de Sistemas.
+            Olá! Sou Tiago, Desenvolvedor Front-end React.
             <br />
           </p>
           <p className="text-[01rem] text-justify indent-3">

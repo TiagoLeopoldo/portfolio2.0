@@ -6,7 +6,7 @@ import Footer from "@/components/molecules/home/Footer.jsx";
 const ProfileSection = () => {
   return (
     <>
-      <div className="flex flex-col items-center text-[#ABB2BF] lg:h-auto">
+      <div className="flex flex-col items-center h-[calc(100vh-8rem)] text-[#ABB2BF] lg:h-auto">
         <Header />
         <Biography />
         <Footer />

@@ -2,15 +2,9 @@ import "@/App.css";
 import bioImg from "@assets/profile/HomePage/avatar.webp";
 import logo from "@assets/profile/HomePage/logoblue.webp";
 import layer from "@assets/profile/HomePage/camada.svg";
-import fetchData from "@/services/fetchPortfolioData.js";
-import { useEffect , useState } from "react";
 
 const Avatar = () => {
-  const [portfolio, setPortfolio] = useState(null);
 
-  useEffect(() => {
-    fetchData().then(setPortfolio);
-  }, []);
 
 
   return (
@@ -48,17 +42,6 @@ const Avatar = () => {
           src={layer}
           alt=""
         />
-      </div>
-
-      {/* Container inferior com texto */}
-      <div className="hidden w-full h-[58px] p-[8px] border border-[#ABB2BF] lg:flex items-center justify-center lg:w-[390px] lg:h-[37px]">
-        <ul className="p-0 flex items-start">
-          <li className="relative flex items-center pl-[29px] before:content-[''] before:absolute before:left-0 before:top-[50%] before:translate-y-[-50%] before:w-[16px] before:h-[16px] before:bg-[#1B98E0] font-medium text-[10px] text-[#ABB2BF]">
-            <p className="font-semibold text-white">
-              {!portfolio ? "loading..." : portfolio.education}
-            </p>
-          </li>
-        </ul>
       </div>
     </div>
   );

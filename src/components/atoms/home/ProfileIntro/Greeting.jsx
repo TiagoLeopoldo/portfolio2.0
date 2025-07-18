@@ -8,12 +8,11 @@ const Greeting = () => {
   const [portfolio, setPortfolio] = useState(null);
   const [isOpenForm, setIsOpenForm] = useState(false);
 
-  // Texto que será exibido com efeito de digitação
   const [texto, setTexto] = useState("");
   const textoCompleto =
     "Transformando códigos em experiências acessíveis,\n buscando novos desafios para escalar soluções inovadoras.";
-  const indexRef = useRef(0); // guarda o índice atual fora do ciclo de renderização
-  const timeoutRef = useRef(null); // guarda a referência do setTimeout
+  const indexRef = useRef(0);
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
     fetchData().then(setPortfolio);
@@ -24,20 +23,19 @@ const Greeting = () => {
       if (indexRef.current < textoCompleto.length) {
         setTexto((prev) => prev + textoCompleto.charAt(indexRef.current));
         indexRef.current++;
-        timeoutRef.current = setTimeout(digitar, 40); // tempo entre cada letra
+        timeoutRef.current = setTimeout(digitar, 40);
       }
     };
 
     digitar();
 
-    // limpeza do timeout ao desmontar o componente
     return () => clearTimeout(timeoutRef.current);
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-center text-[#ABB2BF] text-[32px] mt-[3rem] lg:mt-[5.125rem] pr-[1rem] pb-[1.5rem] pl-[1rem] gap-[1.5625rem] lg:items-start">
-      <div className="items-center justify-between m-auto">
-        <h1 className="text-[#ABB2BF] text-[2rem] font-semibold">
+    <div className="w-full max-w-[1280px] mx-auto flex flex-col items-center justify-center text-[#ABB2BF] text-[32px] mt-[3rem] lg:mt-[5.125rem] px-[1rem] pb-[1.5rem] gap-[1.5625rem] lg:items-start">
+      <div className="w-full items-center justify-center">
+        <h1 className="text-[#ABB2BF] text-[2rem] font-semibold leading-snug">
           Olá,
           <br className="lg:hidden" /> eu sou o{" "}
           {!portfolio ? "loading..." : portfolio.name}! <br />
@@ -46,25 +44,26 @@ const Greeting = () => {
           </span>
         </h1>
 
-        {/* Parágrafo com efeito de digitação e espaço reservado para estabilidade de layout */}
-        <p className="text-[#ABB2BF] text-[1rem] w-full text-justify lg:text-left whitespace-pre-line font-mono relative">
+        <p className="text-[#ABB2BF] text-[1rem] w-full text-justify lg:text-left whitespace-pre-line font-mono relative leading-relaxed">
           <span className="invisible">{textoCompleto}</span>
           <span className="absolute left-0 top-0">{texto}</span>
         </p>
-        <div className="flex gap-[1rem]">
+
+        <div className="flex flex-wrap gap-[1rem] mt-[0.625rem]">
           <a
             href="https://drive.google.com/file/d/1To8wbECzJteJNBidPUFmnODSAQ11hy--/view"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:flex items-center justify-center w-[9.25rem] h-[2.3125rem] border border-solid border-[#1B98E0] rounded-md shadow-md text-center text-[0.9375rem] font-medium font-bold p-[0.5rem_1rem_0.5rem_1rem] opacity-70 mt-[0.625rem] transition-all duration-300 hover:shadow-lg active:scale-[0.8]"
+            className="hidden lg:flex items-center justify-center w-[9.25rem] h-[2.3125rem] border border-solid border-[#1B98E0] rounded-md shadow-md text-center text-[0.9375rem] font-bold px-[1rem] opacity-70 transition-all duration-300 hover:shadow-lg active:scale-[0.95]"
           >
             Currículo
           </a>
+
           <a
             href="https://wa.me/5521974278358?text=Entre%20em%20contato%20com%20Tiago"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:flex items-center justify-center w-[10rem] h-[2.3125rem] border border-solid border-[#1B98E0] rounded-md shadow-md text-center text-[0.9375rem] font-medium font-bold p-[0.5rem_1rem_0.5rem_1rem] opacity-70 mt-[0.625rem] transition-all duration-300 hover:shadow-lg active:scale-[0.8] gap-x-[0.5rem] whitespace-nowrap"
+            className="hidden lg:flex items-center justify-center w-[10rem] h-[2.3125rem] border border-solid border-[#1B98E0] rounded-md shadow-md text-[0.9375rem] font-bold px-[1rem] opacity-70 transition-all duration-300 hover:shadow-lg active:scale-[0.95] gap-x-[0.5rem] whitespace-nowrap"
           >
             Whatsapp
             <img src={Wtsp} alt="" className="w-[1.3rem]" />
@@ -74,7 +73,7 @@ const Greeting = () => {
 
           <button
             onClick={() => setIsOpenForm(true)}
-            className="hidden lg:flex items-center justify-center max-w-full h-[2.3125rem] border border-solid border-[#1B98E0] rounded-md shadow-md text-center text-[0.9375rem] font-medium font-bold p-[0.5rem_1rem_0.5rem_1rem] opacity-70 mt-[0.625rem] transition-all duration-300 hover:shadow-lg active:scale-[0.8] gap-x-[0.5rem] whitespace-nowrap"
+            className="hidden lg:flex items-center justify-center h-[2.3125rem] border border-solid border-[#1B98E0] rounded-md shadow-md text-[0.9375rem] font-bold px-[1rem] opacity-70 transition-all duration-300 hover:shadow-lg active:scale-[0.95] gap-x-[0.5rem] whitespace-nowrap"
           >
             Mande uma mensagem
           </button>
