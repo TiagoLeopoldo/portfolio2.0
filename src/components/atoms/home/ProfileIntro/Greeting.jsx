@@ -51,7 +51,7 @@ const Greeting = () => {
 
         <div className="flex flex-wrap gap-[1rem] mt-[0.625rem]">
           <a
-            href="https://drive.google.com/file/d/1To8wbECzJteJNBidPUFmnODSAQ11hy--/view"
+            href="https://docs.google.com/file/d/1n10SCEr97YrJvcRbNUjnuTMuipkxUftMj3uagX75EMs/view            "
             target="_blank"
             rel="noopener noreferrer"
             className="hidden lg:flex items-center justify-center w-[9.25rem] h-[2.3125rem] border border-solid border-[#1B98E0] rounded-md shadow-md text-center text-[0.9375rem] font-bold px-[1rem] opacity-70 transition-all duration-300 hover:shadow-lg active:scale-[0.95]"
